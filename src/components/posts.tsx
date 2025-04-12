@@ -14,13 +14,9 @@ export function BlogPosts() {
           return 1;
         })
         .map((post) => (
-          <Link
-            key={post.slug}
-            className="mb-4 flex flex-col space-y-1"
-            href={`/blog/${post.slug}`}
-          >
-            <div className="flex w-full flex-col space-x-0 md:flex-row md:space-x-2">
-              <p className="w-[100px] text-neutral-600 tabular-nums dark:text-neutral-400">
+          <Link key={post.slug} className="flex flex-col space-y-2" href={`/blog/${post.slug}`}>
+            <div className="flex w-full flex-col items-center gap-2 space-x-0 md:flex-row md:space-x-2">
+              <p className="mr-2 text-sm! text-neutral-600 tabular-nums dark:text-neutral-300">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
               <p className="tracking-tight text-neutral-900 dark:text-neutral-100">

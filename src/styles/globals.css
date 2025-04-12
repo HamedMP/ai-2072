@@ -194,7 +194,7 @@
 
 .dark a:link,
 .dark a:visited {
-  color: var(--primary);
+  /* color: var(--foreground); */
 }
 
 .dark code,

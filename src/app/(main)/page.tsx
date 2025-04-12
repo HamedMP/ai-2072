@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { Component } from '@/components/my-chart';
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
           <Button variant="outline">Subscribe</Button>
         </div>
       </section>
+
+      <Component />
 
       <Separator className="my-8" />
 

@@ -1,5 +1,9 @@
 import About from '@/content/about.mdx';
 
 export default function Page() {
-  return <About />;
+  return (
+    <div className="w-full">
+      <About />
+    </div>
+  );
 }
