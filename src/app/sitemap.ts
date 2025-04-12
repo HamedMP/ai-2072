@@ -1,6 +1,6 @@
 import { getBlogPosts } from '@/app/(blog)/blog/utils';
 
-export const baseUrl = 'https://ai-2072-template.vercel.app';
+export const baseUrl = 'https://ai-2072.vercel.app/';
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
