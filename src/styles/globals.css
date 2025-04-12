@@ -14,10 +14,10 @@
 @font-face {
   font-family: 'et-book';
   src: url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot');
-  src: url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix')
+  src:
+    url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix')
       format('embedded-opentype'),
-    url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff')
-      format('woff'),
+    url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff') format('woff'),
     url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf')
       format('truetype'),
     url('fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf')
@@ -79,8 +79,8 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: et-book, Palatino, 'Palatino Linotype', 'Palatino LT STD',
-      'Book Antiqua', Georgia, serif;
+    font-family:
+      et-book, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
   }
 }
 
@@ -88,15 +88,15 @@
   --radius: 0.625rem;
   --background: oklch(1 0.0092 106.56);
   --foreground: oklch(0.2 0 0);
-  --card: oklch(1 0 0);
+  --card: oklch(1 0.01 106.56);
   --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
+  --popover: oklch(1 0.0092 106.56);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --muted: oklch(0.97 0.0092 106.56);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
