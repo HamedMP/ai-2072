@@ -1,0 +1,61 @@
+import Image from 'next/image';
+
+<main className=''>
+      <article className=''>
+        <h1>Dark Mode with Tufte CSS</h1>
+
+          This is a test page to demonstrate dark mode with Tufte CSS and
+          Tailwind v4. The page should automatically switch between light and
+          dark mode based on your system preferences, or you can manually toggle
+          it using the button in the header.
+
+        <h2>Sample Content</h2>
+
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+          mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
+          neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+          Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+          Suspendisse dictum feugiat nisl ut dapibus.
+
+
+        <blockquote>
+
+            This is a blockquote that should look good in both light and dark
+            modes. Tufte CSS provides elegant styling for blockquotes.
+
+          <footer>
+            — <cite>Edward Tufte</cite>
+          </footer>
+        </blockquote>
+
+        <h3>Code Example</h3>
+
+        <pre>
+          <code>
+            {`function hello() {
+
+console.log("Hello, world!");
+}`}
+
+      </code>
+      </pre>
+
+
+        The code above should be properly styled in both light and dark modes. Tufte
+        CSS provides elegant styling for code blocks.
+
+<h3>Figure Example</h3>
+
+<figure>
+  <Image src="https://placehold.co/400x400/png" alt="Placeholder image" width={400} height={400} />
+  <figcaption>
+    This is a figure caption. Tufte CSS provides elegant styling for figures and captions.
+  </figcaption>
+</figure>
+
+        The figure above should be properly styled in both light and dark
+        modes. Tufte CSS provides elegant styling for figures and captions.
+
+</article>
+</main>

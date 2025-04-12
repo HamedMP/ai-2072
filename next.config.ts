@@ -1,7 +1,24 @@
-import type { NextConfig } from "next";
+import remarkGfm from 'remark-gfm';
 
+import type { NextConfig } from 'next';
+import createMDX from '@next/mdx';
+import rehypeSlug from 'rehype-slug';
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'placehold.co',
+        protocol: 'https',
+      },
+    ],
+  },
 };
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug],
+  },
+});
 
-export default nextConfig;
+export default withMDX(nextConfig);
