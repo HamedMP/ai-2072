@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const processor = remark()
     .use(remarkToc)
     .use(() => (tree) => {
-      visit(tree, 'heading', (node: any) => {
+      visit(tree, 'heading', (node: { children: { value: string }[]; depth: number }) => {
         const text = node.children[0].value;
         const id = text.toLowerCase().replace(/\s+/g, '-');
         headings.push({ text, id, level: node.depth });
