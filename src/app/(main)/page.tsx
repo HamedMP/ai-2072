@@ -7,31 +7,34 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
-import { Component } from '@/components/my-chart';
+import { getBlogPosts, formatDate } from '@/app/(blog)/blog/utils';
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getBlogPosts();
+  const featuredPosts = posts.slice(0, 3);
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Section */}
       <section className="mb-12 flex flex-col items-center space-y-4 text-center">
-        <h1 className="text-4xl font-bold">Welcome to My Digital Garden 🌱</h1>
+        <h1 className="text-4xl font-bold">Futurism, AI, and Design</h1>
         <p className="text-muted-foreground max-w-2xl text-xl">
-          Exploring technology, design, and everything in between. Join me on this journey of
-          continuous learning and discovery.
+          A modern exploration of AI futures, typography, and design. This digital garden combines
+          Tufte-inspired aesthetics with cutting-edge web technologies.
         </p>
         <div className="flex gap-4">
           <Button>
             <Link href="/blog">Read Blog</Link>
           </Button>
-          <Button variant="outline">Subscribe</Button>
+          <Button variant="outline">
+            <Link href="/about">About Project</Link>
+          </Button>
         </div>
       </section>
-
-      <Component />
 
       <Separator className="my-8" />
 
@@ -39,25 +42,21 @@ export default function Home() {
       <section className="mb-12">
         <h2 className="mb-6 text-2xl font-semibold">Featured Posts</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <Card key={i}>
+          {featuredPosts.map((post) => (
+            <Card key={post.slug}>
               <CardHeader>
-                <CardTitle>Understanding Web3 Basics</CardTitle>
-                <CardDescription>Posted on April 1, 2024</CardDescription>
+                <CardTitle>{post.metadata.title}</CardTitle>
+                <CardDescription>Posted on {formatDate(post.metadata.publishedAt)}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  A deep dive into the fundamentals of Web3 technology and its implications for the
-                  future of the internet.
-                </p>
+                <p className="text-muted-foreground">{post.metadata.summary}</p>
               </CardContent>
               <CardFooter className="flex items-center justify-between">
                 <div className="flex gap-2">
-                  <Badge>Web3</Badge>
-                  <Badge variant="outline">Technology</Badge>
+                  <Badge>Blog</Badge>
                 </div>
-                <Button variant="ghost" size="sm">
-                  Read More →
+                <Button variant="ghost" size="sm" asChild>
+                  <Link href={`/blog/${post.slug}`}>Read More →</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -65,17 +64,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      <Separator className="my-12" />
+
       <section className="bg-muted rounded-lg p-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 text-2xl font-semibold">Stay Updated</h2>
           <p className="text-muted-foreground mb-6">
             Get the latest posts and updates delivered directly to your inbox.
           </p>
-          <div className="mx-auto flex max-w-md gap-4">
-            <Input type="email" placeholder="Enter your email" />
-            <Button>Subscribe</Button>
-          </div>
+          <Button>Subscribe</Button>
         </div>
       </section>
     </div>

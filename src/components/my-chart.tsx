@@ -23,15 +23,15 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: 'Desktop',
-    color: '#2563eb',
+    color: 'var(--chart-1)',
   },
   mobile: {
     label: 'Mobile',
-    color: '#60a5fa',
+    color: 'var(--chart-2)',
   },
 } satisfies ChartConfig;
 
-export function Component() {
+export function ChartComponentSample() {
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
       <BarChart accessibilityLayer data={chartData}>

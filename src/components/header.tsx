@@ -12,8 +12,9 @@ export function Header() {
       </Link>
       <nav className="flex gap-4 text-xl">
         <HeaderNavItem href="/">Home</HeaderNavItem>
-        <HeaderNavItem href="/blog">Blog</HeaderNavItem>
         <HeaderNavItem href="/about">About</HeaderNavItem>
+        <HeaderNavItem href="/tufte">Tufte CSS</HeaderNavItem>
+        <HeaderNavItem href="/blog">Blog</HeaderNavItem>
       </nav>
       <ModeToggle />
     </nav>

@@ -10,7 +10,7 @@ import { visit } from 'unist-util-visit';
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getBlogPosts().find((post) => post.slug === slug);
+  const post = (await getBlogPosts()).find((post) => post.slug === slug);
 
   if (!post) {
     return notFound();
@@ -41,16 +41,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 }
 
 export async function generateStaticParams() {
-  const posts = getBlogPosts();
+  const posts = await getBlogPosts();
 
-  return posts.map((post) => ({
+  return (await posts).map((post) => ({
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getBlogPosts().find((post) => post.slug === slug);
+  const post = (await getBlogPosts()).find((post) => post.slug === slug);
   if (!post) {
     return;
   }
