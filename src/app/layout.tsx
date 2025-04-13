@@ -8,8 +8,8 @@ import { Footer } from '@/components/footer';
 import { ScrollLinked } from '@/components/scroll-progress';
 
 export const metadata: Metadata = {
-  title: 'AI 2027 Template',
-  description: 'AI 2027 Template',
+  title: 'AI 2072',
+  description: 'Nextjs Blog Template with Tufte CSS',
 };
 
 export default function RootLayout({
