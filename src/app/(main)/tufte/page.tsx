@@ -89,12 +89,12 @@ export default function TuftePage() {
             pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the
             text. It also uses the methodology of <em>sentences</em> which then cumulate
             sequentially into <em>paragraphs</em>, rather than the grunts of bullet points.
-            Undergraduate Caltech physics is very complicated material, but it didn't require an
-            elaborate hierarchy to organize.
+            Undergraduate Caltech physics is very complicated material, but it didn&apos;t require
+            an elaborate hierarchy to organize.
           </p>
           <footer>
             <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
-              Edward Tufte, forum post, 'Book design: advice and examples' thread
+              Edward Tufte, forum post, &quot;Book design: advice and examples&quot; thread
             </a>
           </footer>
         </blockquote>
@@ -134,9 +134,9 @@ export default function TuftePage() {
         <p>
           Although paper handouts obviously have a pure white background, the web is better served
           by the use of slightly off-white and off-black colors. Tufte CSS uses <code>#fffff8</code>{' '}
-          and <code>#111111</code> because they are nearly indistinguishable from their 'pure'
-          cousins, but dial down the harsh contrast. We stick to the greyscale for text, reserving
-          color for specific, careful use in figures and images.
+          and <code>#111111</code> because they are nearly indistinguishable from their
+          &apos;pure&apos; cousins, but dial down the harsh contrast. We stick to the greyscale for
+          text, reserving color for specific, careful use in figures and images.
         </p>
         <p>
           In print, Tufte has used the proprietary Monotype Bembo
@@ -146,7 +146,7 @@ export default function TuftePage() {
           ></label>
           <input type="checkbox" id="sn-proprietary-monotype-bembo" className="margin-toggle" />
           <span className="sidenote">
-            See Tufte's comment in the{' '}
+            See Tufte&apos;s comment in the{' '}
             <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">
               Tufte book fonts
             </a>{' '}
@@ -154,8 +154,8 @@ export default function TuftePage() {
           </span>{' '}
           font. A similar effect is achieved in digital formats with the now open-source{' '}
           <a href="https://github.com/edwardtufte/et-book">ETBook</a>, which Tufte CSS supplies with
-          a <code>@font-face</code> reference to a .ttf file. In case ETBook somehow didn't work,
-          Tufte CSS shifts gracefully to other serif fonts like Palatino and Georgia.
+          a <code>@font-face</code> reference to a .ttf file. In case ETBook somehow didn&apos;t
+          work, Tufte CSS shifts gracefully to other serif fonts like Palatino and Georgia.
         </p>
         <p>
           Also notice how Tufte CSS includes separate font files for bold (strong) and italic
@@ -164,7 +164,7 @@ export default function TuftePage() {
         </p>
         <p className="sans">
           If you prefer sans-serifs, use the <code>sans</code> class. It relies on Gill Sans,
-          Tufte's sans-serif font of choice.
+          Tufte&apos;s sans-serif font of choice.
         </p>
         <p>
           Links in Tufte CSS match the body text in color and do not change on mouseover or when
@@ -196,7 +196,7 @@ export default function TuftePage() {
               foolish, but the slovenliness of our language makes it easier for us to have foolish
               thoughts.
             </p>
-            <footer>George Orwell, "Politics and the English Language"</footer>
+            <footer>George Orwell, &quot;Politics and the English Language&quot;</footer>
           </blockquote>
           <blockquote>
             <p>
@@ -204,7 +204,7 @@ export default function TuftePage() {
               Nature cannot be fooled.
             </p>
             <footer>
-              Richard P. Feynman, <cite>"What Do You Care What Other People Think?"</cite>
+              Richard P. Feynman, <cite>&quot;What Do You Care What Other People Think?&quot;</cite>
             </footer>
           </blockquote>
           <blockquote>
@@ -216,8 +216,8 @@ export default function TuftePage() {
           </blockquote>
         </div>
         <p>
-          If you'd like to introduce your page or a section of your page with some quotes, use
-          epigraphs. Modeled after chapter epigraphs in Tufte's books (particularly{' '}
+          If you&apos;d like to introduce your page or a section of your page with some quotes, use
+          epigraphs. Modeled after chapter epigraphs in Tufte&apos;s books (particularly{' '}
           <em>Beautiful Evidence</em>), these are <code>blockquote</code> elements with a bit of
           specialized styling. Quoted text is italicized. The source goes in a <code>footer</code>{' '}
           element inside the <code>blockquote</code>. We have provided three examples in the
@@ -230,14 +230,15 @@ export default function TuftePage() {
       <section>
         <h2 id="sidenotes">Sidenotes: Footnotes and Marginal Notes</h2>
         <p>
-          One of the most distinctive features of Tufte's style is his extensive use of sidenotes.
+          One of the most distinctive features of Tufte&apos;s style is his extensive use of
+          sidenotes.
           <label
             htmlFor="sn-extensive-use-of-sidenotes"
             className="margin-toggle sidenote-number"
           ></label>
           <input type="checkbox" id="sn-extensive-use-of-sidenotes" className="margin-toggle" />
           <span className="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except
-          they don't force the reader to jump their eye to the bottom of the page, but instead
+          they don&apos;t force the reader to jump their eye to the bottom of the page, but instead
           display off to the side in the margin. Perhaps you have noticed their use in this document
           already. You are very astute.
         </p>
@@ -263,9 +264,9 @@ export default function TuftePage() {
         </pre>
         <p>
           You must manually assign a reference <code>id</code> to each side or margin note,
-          replacing "sn-demo" in the <code>for</code> and the <code>id</code> attribute values with
-          an appropriate descriptor. It is useful to use prefixes like <code>sn-</code> for
-          sidenotes and <code>mn-</code> for margin notes.
+          replacing &quot;sn-demo&quot; in the <code>for</code> and the <code>id</code> attribute
+          values with an appropriate descriptor. It is useful to use prefixes like <code>sn-</code>{' '}
+          for sidenotes and <code>mn-</code> for margin notes.
         </p>
         <p>
           Immediately adjacent to that sidenote reference in the main text goes the sidenote content
@@ -285,14 +286,14 @@ export default function TuftePage() {
           </label>
           <input type="checkbox" id="mn-demo" className="margin-toggle" />
           <span className="marginnote">
-            This is a margin note. Notice there isn't a number preceding the note.
+            This is a margin note. Notice there isn&apos;t a number preceding the note.
           </span>{' '}
           On large screens, a margin note is just a sidenote that omits the reference number. This
           lessens the distracting effect taking away from the flow of the main text, but can
           increase the cognitive load of matching a margin note to its referent text. However, on
           small screens, a margin note is like a sidenote except its viewability-toggle is a symbol
           rather than a reference number. This document currently uses the symbol &#8853; (
-          <code>&amp;#8853;</code>), but it's up to you.
+          <code>&amp;#8853;</code>), but it&apos;s up to you.
         </p>
         <p>
           Margin notes are created just like sidenotes, but with the <code>marginnote</code> class
@@ -324,9 +325,9 @@ the note. </span>`}
         </p>
         <p>
           Figures should try to use the <code>figure</code> element, which by default are
-          constrained to the main column. Don't wrap figures in a paragraph tag. Any label or margin
-          note goes in a regular margin note inside the figure. For example, most of the time one
-          should introduce a figure directly into the main flow of discussion, like so:
+          constrained to the main column. Don&apos;t wrap figures in a paragraph tag. Any label or
+          margin note goes in a regular margin note inside the figure. For example, most of the time
+          one should introduce a figure directly into the main flow of discussion, like so:
         </p>
         <figure>
           <label htmlFor="mn-exports-imports" className="margin-toggle">
@@ -349,24 +350,27 @@ the note. </span>`}
           <input type="checkbox" id="mn-figure-1" className="margin-toggle" />
           <span className="marginnote">
             <img src="img/rhino.png" alt="Image of a Rhinoceros" />
-            F.J. Cole, "The History of Albrecht Dürer's Rhinoceros in Zooological Literature,"{' '}
+            F.J. Cole, &quot;The History of Albrecht Dürer&apos;s Rhinoceros in Zooological
+            Literature,&quot;{' '}
             <em>
               Science, Medicine, and History: Essays on the Evolution of Scientific Thought and
               Medical Practice
             </em>{' '}
-            (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte's{' '}
+            (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte&apos;s{' '}
             <em>Visual Explanations</em>.
           </span>{' '}
-          But tight integration of graphics with text is central to Tufte's work even when those
-          graphics are ancillary to the main body of a text. In many of those cases, a margin figure
-          may be most appropriate. To place figures in the margin, just wrap an image (or whatever)
-          in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.
+          But tight integration of graphics with text is central to Tufte&apos;s work even when
+          those graphics are ancillary to the main body of a text. In many of those cases, a margin
+          figure may be most appropriate. To place figures in the margin, just wrap an image (or
+          whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this
+          paragraph.
         </p>
         <p>
           If you need a full-width figure, give it the <code>fullwidth</code> class. Make sure
-          that's inside an <code>article</code>, and it will take up (almost) the full width of the
-          screen. This approach is demonstrated below using Edward Tufte's English translation of
-          the Napoleon's March data visualization. From <em>Beautiful Evidence</em>, page 122-124.
+          that&apos;s inside an <code>article</code>, and it will take up (almost) the full width of
+          the screen. This approach is demonstrated below using Edward Tufte&apos;s English
+          translation of the Napoleon&apos;s March data visualization. From{' '}
+          <em>Beautiful Evidence</em>, page 122-124.
         </p>
         <figure className="fullwidth">
           <img
